@@ -10,6 +10,7 @@
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather Check</title>
   </head>
@@ -18,10 +19,10 @@
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="overview">
-            <h1>Dublin, Ireland</h1>
+            <h1 id="city"></h1>
             <ul>
               <li>Thursday 14.30 GMT+1</li>
-              <li>Partly Cloudy</li>
+              <li id="description"></li>
             </ul>
           </div>
           <div class="row">
@@ -32,16 +33,15 @@
                   alt="Partly Cloudy"
                 />
                 <!-- was demo as ending with class="float-left" but wasn't needed  -->
-                <strong>12</strong
+                <strong id="temperature"></strong
                 ><span class="units">°C | <a href="#">°F</a></span>
                 <!-- Was demoed as <div class="float-left">12°C | 12°F</div> but didn't work -->
               </div>
             </div>
             <div class="col-6">
               <ul>
-                <li>Precipitation: 0%</li>
-                <li>Humidity: 75%</li>
-                <li>Wind: 2km/h</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
